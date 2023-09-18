@@ -1,0 +1,15 @@
+service: express-test
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: ap-south-1
+  httpApi:
+    cors: true
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - httpApi: '*'
