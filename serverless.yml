@@ -1,12 +1,20 @@
 service: express-test
 frameworkVersion: '3'
 
+useDotenv: true
+
 provider:
   name: aws
   runtime: nodejs18.x
   region: ap-south-1
   httpApi:
     cors: true
+  environment:
+    WHATSAPP_TOKEN: ${env:WHATSAPP_TOKEN}
+    VERIFY_TOKEN: ${env:VERIFY_TOKEN}
+	
+plugins:
+  - serverless-export-env
 
 functions:
   api:

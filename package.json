@@ -5,8 +5,12 @@
   "dependencies": {
     "axios": "^1.5.0",
     "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "express-async-handler": "^1.2.0",
     "serverless-http": "^3.1.1"
+  },
+  "devDependencies": {
+    "serverless-export-env": "github:arabold/serverless-export-env"
   }
 }

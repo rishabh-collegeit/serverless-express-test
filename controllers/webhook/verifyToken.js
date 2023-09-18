@@ -8,14 +8,16 @@
  * if they are not the same, we send a 403 forbidden status
  *
  */
+require("dotenv").config();
 const verifyToken = async (req, res) => {
     let mode = req.query["hub.mode"];
     let token = req.query["hub.verify_token"];
     let challenge = req.query["hub.challenge"];
     console.log("got get request on webhook", req.query);
 
+
     if (mode && token) {
-        if (mode === "subscribe" && token === "test") {
+        if (mode === "subscribe" && token === process.env.VERIFY_TOKEN) {
             console.log("WEBHOOK_VERIFIED");
             return res.status(200).send(challenge);
         }

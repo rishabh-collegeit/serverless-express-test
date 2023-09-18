@@ -25,24 +25,8 @@ const webhookHandler = async (req, res) => {
     }
 
     console.log(JSON.stringify(req.body, null, 2));
-    sendWaMessage("116160598212405","918287233813","hy from the rishabh gaud...")
-    // if (MsgHook.isMsg(waHookBody)) {
-    //     const msg = new MsgHook(waHookBody);
-
-
-    //     if (mentor) {
-    //         await mentorReply(mentor, msg);
-    //     } else {
-    //         const isBlocked = await checkIfBlocked(msg.getFrom());
-    //         if (!isBlocked) {
-    //             await studentReply(msg);
-    //         }
-    //     }
-
-        return res.status(200).end();
-    // } else {
-    //     return res.status(403).end();
-    // }
+    await sendWaMessage("116160598212405","918287233813","hy from the rishabh gaud...")
+    return res.status(200).end();
 };
 
 module.exports = webhookHandler;
