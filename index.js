@@ -14,6 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/webhook", require("./routes/webhook"));
+app.use("/dbcheck", require("./routes/dbcheck"));
 app.get("/", (req, res, next) => {
   return res.status(200).json({
     message: "Hello from root!",
@@ -31,5 +32,6 @@ app.use((req, res, next) => {
     error: "Not Found",
   });
 });
+
 
 module.exports.handler = serverless(app);
