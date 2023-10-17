@@ -5,6 +5,7 @@ const apiKey = "e35f988dfeccdc4c8e7ba37078d2457c";
 async function fetchWeatherData(location) {
   try {
     const city = await extractLocationFromText(location);
+    console.log('city',city,typeof location,'type')
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
     console.log("API URL: ", apiUrl);
     

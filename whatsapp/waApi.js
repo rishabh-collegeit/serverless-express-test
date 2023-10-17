@@ -1,6 +1,6 @@
 const axios = require("axios");
 require("dotenv").config();
-const token  = "EAAD6FwQ4acQBO8UdeFhSn262TwFPZApQZBc5MAcShP4Etcp450JpvLX6F2mZBmZC8B9vzLoaN5T0b64XD9ieaX7s7B8vw9r9LEOdfZCxeZA6COtWLlgjZCMN3aIo8H1Y3FzmNaXYXYxnzqMDcKmvfWboVJDbZBoX6RWhBsxxpd13ANGQLEkcfi3HMTs0P80rwvCYJCDmUvMK5t6Pp9jPkJ5A71qVzvWjGkHxkZC0jMpfOVkkZD"
+const token  = "EAAD6FwQ4acQBOyUblyFcX13368RZB9ehk4NZBDYN3hpwhKgc5OJmnZB9pvoeZAvR9qYUj9sKZCNRggaASGCGvmJ8r93f7huYwNV7RHZC3ZAPtdknCAKd49BETNX5UisIJZAPtrI6fJKybZCDh0XdENP6hpwyz3JaAPR82DWLSnY0xj6j88nGjeOjTKo5Gu3Rrp3E6U06DtmO0PhZBcZBq9u5ZAA6JCTUzQMdUvpmfGSpiYWZAah0ZD"
 const waApi = axios.create({
     baseURL: "https://graph.facebook.com/v17.0",
     headers: {
