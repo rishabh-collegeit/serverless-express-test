@@ -13,7 +13,8 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// app.use("/webhook", require("./routes/webhook"));
+app.use("/webhook", require("./routes/webhook"));
+app.use("/conversation", require("./routes/conversation"));
 app.use("/mentors", require("./routes/dbcheck"));
 app.get("/", (req, res, next) => {
   return res.status(200).json({

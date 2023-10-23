@@ -1,5 +1,6 @@
 const contactSchema = require("../models/contact.schema");
 const mentorSchema = require("../models/mentor.schema");
+const MentorTestSchema = require("../models/Mentor");
 
 /**
  * Get getMentorsInfo
@@ -50,7 +51,20 @@ const createContact = async (req, res) => {
   }
 };
 
+const createMentor = async (req, res) => {
+  try {
+    const newMentor = new MentorTestSchema(req.body);
+    await newMentor.save();
+    console.log(newMentor);
+    res.status(201).json(newMentor);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Failed to create Test Mentor" });
+  }
+};
+
 module.exports = {
   getMentorsInfo,
   createContact,
+  createMentor
 };

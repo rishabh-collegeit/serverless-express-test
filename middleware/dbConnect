@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const dbConnect = async (req, res, next) => {
   try {
     const connection = await mongoose.connect(
-      `mongodb+srv://collegeitadmin:collegeit@cluster0.hk14d.mongodb.net/collegeitdb?retryWrites=true`
+      `mongodb+srv://thegreatoffer:omqk7uFocpZQkhst@cluster0.6vhl28n.mongodb.net/"`
     );
     console.log("db connected");
     next();

@@ -10,7 +10,8 @@
     "express": "^4.18.2",
     "express-async-handler": "^1.2.0",
     "mongoose": "^7.5.3",
-    "serverless-http": "^3.1.1"
+    "serverless-http": "^3.1.1",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "serverless-export-env": "github:arabold/serverless-export-env"
